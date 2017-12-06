@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 12/06/2017 08:19:10 AM
+-- Create Date: 12/06/2017 08:32:50 AM
 -- Design Name: 
 -- Module Name: Main - Behavioral
 -- Project Name: 
@@ -32,12 +32,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Main is
-    Port ( pushButton : in STD_LOGIC_VECTOR (3 downto 0);
-           display : out STD_LOGIC);
+    Port ( Button : in STD_LOGIC_VECTOR (3 downto 0);
+           );
 end Main;
 
 architecture Behavioral of Main is
-
+signal time: integer <= 0;
 begin
 
 
