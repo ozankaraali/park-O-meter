@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Dec  6 09:39:57 2017
+| Date         : Mon Dec 11 15:24:11 2017
 | Host         : OZANKARAALI59C9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file display_controller_utilization_synth.rpt -pb display_controller_utilization_synth.pb
 | Design       : display_controller
