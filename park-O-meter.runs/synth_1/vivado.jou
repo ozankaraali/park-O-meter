@@ -2,11 +2,11 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Mon Dec 11 15:23:37 2017
-# Process ID: 720
+# Start of session at: Tue Dec 12 22:40:00 2017
+# Process ID: 5752
 # Current directory: Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1
-# Command line: vivado.exe -log display_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_controller.tcl
-# Log file: Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1/display_controller.vds
+# Command line: vivado.exe -log counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter.tcl
+# Log file: Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1/counter.vds
 # Journal file: Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source display_controller.tcl -notrace
+source counter.tcl -notrace
