@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 
 entity bin2bcd_12bit is
-    Port ( binIN : in  STD_LOGIC_VECTOR (11 downto 0);
+    Port ( binIN : in  STD_LOGIC_VECTOR (15 downto 0);
            ones : out  STD_LOGIC_VECTOR (3 downto 0);
            tens : out  STD_LOGIC_VECTOR (3 downto 0);
            hundreds : out  STD_LOGIC_VECTOR (3 downto 0);
@@ -19,7 +19,7 @@ begin
 bcd1: process(binIN)
 
   -- temporary variable
-  variable temp : STD_LOGIC_VECTOR (11 downto 0);
+  variable temp : STD_LOGIC_VECTOR (15 downto 0);
   
   -- variable to store the output BCD number
   -- organized as follows
@@ -37,12 +37,12 @@ bcd1: process(binIN)
     bcd := (others => '0');
     
     -- read input into temp variable
-    temp(11 downto 0) := binIN;
+    temp(15 downto 0) := binIN;
     
     -- cycle 12 times as we have 12 input bits
     -- this could be optimized, we do not need to check and add 3 for the 
     -- first 3 iterations as the number can never be >4
-    for i in 0 to 11 loop
+    for i in 0 to 15 loop
     
       if bcd(3 downto 0) > 4 then 
         bcd(3 downto 0) := bcd(3 downto 0) + 3;
@@ -60,10 +60,10 @@ bcd1: process(binIN)
       -- so don't need to do anything to upper 4 bits of bcd
     
       -- shift bcd left by 1 bit, copy MSB of temp into LSB of bcd
-      bcd := bcd(14 downto 0) & temp(11);
+      bcd := bcd(14 downto 0) & temp(15);
     
       -- shift temp left by 1 bit
-      temp := temp(10 downto 0) & '0';
+      temp := temp(14 downto 0) & '0';
     
     end loop;
  

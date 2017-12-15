@@ -27,7 +27,7 @@ end component;
 
 COMPONENT bin2bcd_12bit
     PORT(
-         binIN : IN  std_logic_vector(11 downto 0);
+         binIN : IN  std_logic_vector(15 downto 0);
          ones : OUT  std_logic_vector(3 downto 0);
          tens : OUT  std_logic_vector(3 downto 0);
          hundreds : OUT  std_logic_vector(3 downto 0);
@@ -36,17 +36,14 @@ COMPONENT bin2bcd_12bit
     END COMPONENT;
     
 -- change value if you want (default := 20)
-constant val: std_logic_vector (15 downto 0):="0000000000100000";	--load 00 := 0000 0000 
-constant valup: std_logic_vector (15 downto 0):="0000000000000000";  	--load 20 := 0010 0000 
 signal time: integer := 0;
 --
-signal temp_count: std_logic_vector (15 downto 0):=val;
 signal slow_clk: std_logic;
 signal clk_divider: std_logic_vector (25 downto 0);
 --
 
 --Inputs
-   signal binIN : std_logic_vector(11 downto 0) := (others => '0');
+   signal binIN : std_logic_vector(15 downto 0) := (others => '0');
 --Outputs
    signal ones : std_logic_vector(3 downto 0);
    signal tenths : std_logic_vector(3 downto 0);
@@ -84,15 +81,11 @@ clk_division: process (clk, clk_divider)
             clk_divider<=clk_divider +1;
         end if;
         
-        if clk_divider = "0101111101011110000100000000" then
-            slow_clk<='1';
-        else
-            slow_clk<='0';
-        end if;
+        slow_clk<=clk_divider(24);
     
 end process;
     
-counting: process (reset, slow_clk, temp_count,button0,button1,button2,button3)   
+counting: process (reset, slow_clk,button0,button1,button2,button3)   
     begin
             if slow_clk'event and slow_clk='1' then
                 if button0='1' then
@@ -105,10 +98,10 @@ counting: process (reset, slow_clk, temp_count,button0,button1,button2,button3)
                     time<=time+300;
                 else
                     if binIN = 0 then
-                        binIN <= std_logic_vector (to_unsigned(time,12));
+                        binIN <= std_logic_vector (to_unsigned(time,16));
                     else   
                         time<=time-1;
-                        binIN<=std_logic_vector (to_unsigned(time,12));
+                        binIN<=std_logic_vector (to_unsigned(time,16));
                     end if;
                 end if;
         end if;
