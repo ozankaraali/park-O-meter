@@ -29,6 +29,7 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo z:/mahmut/park-O-meter/park-O-meter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/bin2bcd.vhd
   Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd
   Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd
 }

@@ -14,21 +14,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8792 
+INFO: Helper process launched with PID 4416 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 343.836 ; gain = 94.910
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 343.785 ; gain = 94.883
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'counter' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:18]
-INFO: [Synth 8-3491] module 'display_controller' declared at 'Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:6' bound to instance 'display_out' of component 'display_controller' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:38]
+INFO: [Synth 8-3491] module 'bin2bcd_12bit' declared at 'Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/bin2bcd.vhd:6' bound to instance 'uut' of component 'bin2bcd_12bit' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'bin2bcd_12bit' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/bin2bcd.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcd_12bit' (1#1) [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/bin2bcd.vhd:15]
+INFO: [Synth 8-3491] module 'display_controller' declared at 'Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:6' bound to instance 'display_out' of component 'display_controller' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:68]
 INFO: [Synth 8-638] synthesizing module 'display_controller' [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'display_controller' (1#1) [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'counter' (2#1) [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'display_controller' (2#1) [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'counter' (3#1) [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:18]
 WARNING: [Synth 8-3331] design display_controller has unconnected port reset
-WARNING: [Synth 8-3331] design counter has unconnected port button1
-WARNING: [Synth 8-3331] design counter has unconnected port button2
-WARNING: [Synth 8-3331] design counter has unconnected port button3
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 384.914 ; gain = 135.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 384.867 ; gain = 135.965
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -38,7 +38,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 384.914 ; gain = 135.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 384.867 ; gain = 135.965
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -54,27 +54,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 689.504 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 697.953 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element q_next_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:29]
-WARNING: [Synth 8-6014] Unused sequential element clk_divider_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:54]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element clk_divider_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element time_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:95]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -87,14 +89,18 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 23    
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 8     
-	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 15    
 	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -105,13 +111,21 @@ Hierarchical RTL Component report
 Module counter 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 3     
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 8     
-	   2 Input     12 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module bin2bcd_12bit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 23    
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 15    
 Module display_controller 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -132,14 +146,32 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element display_out/q_next_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/display_controller.vhd:29]
-WARNING: [Synth 8-6014] Unused sequential element clk_divider_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:54]
+WARNING: [Synth 8-6014] Unused sequential element clk_divider_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:84]
+WARNING: [Synth 8-6014] Unused sequential element time_reg was removed.  [Z:/mahmut/park-O-meter/park-O-meter.srcs/sources_1/new/seq_det.vhd:95]
 WARNING: [Synth 8-3331] design counter has unconnected port reset
-WARNING: [Synth 8-3331] design counter has unconnected port button1
-WARNING: [Synth 8-3331] design counter has unconnected port button2
-WARNING: [Synth 8-3331] design counter has unconnected port button3
 WARNING: [Synth 8-3332] Sequential element (clk_divider_reg[25]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[12]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[13]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[14]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[15]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[16]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[17]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[18]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[19]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[20]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[21]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[22]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[23]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[24]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[25]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[26]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[27]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[28]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[29]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[30]) is unused and will be removed from module counter.
+WARNING: [Synth 8-3332] Sequential element (time_reg[31]) is unused and will be removed from module counter.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -151,13 +183,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -169,7 +201,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -193,7 +225,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -206,7 +238,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,25 +250,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -253,34 +285,33 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT1   |     6|
-|4     |LUT2   |     6|
-|5     |LUT3   |     2|
-|6     |LUT4   |    20|
-|7     |LUT5   |     4|
-|8     |LUT6   |     4|
-|9     |FDRE   |    55|
-|10    |FDSE   |     6|
-|11    |IBUF   |     2|
-|12    |OBUF   |    11|
+|2     |CARRY4 |    24|
+|3     |LUT1   |    13|
+|4     |LUT2   |    12|
+|5     |LUT3   |    15|
+|6     |LUT4   |     9|
+|7     |LUT5   |    20|
+|8     |LUT6   |    34|
+|9     |FDRE   |    69|
+|10    |IBUF   |     5|
+|11    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------+-------------------+------+
 |      |Instance      |Module             |Cells |
 +------+--------------+-------------------+------+
-|1     |top           |                   |   129|
+|1     |top           |                   |   213|
 |2     |  display_out |display_controller |    41|
 +------+--------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 689.504 ; gain = 135.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 689.504 ; gain = 440.578
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 697.953 ; gain = 135.965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 697.953 ; gain = 449.051
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -288,10 +319,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 689.504 ; gain = 451.809
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 697.953 ; gain = 461.145
 INFO: [Common 17-1381] The checkpoint 'Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1/counter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file counter_utilization_synth.rpt -pb display_controller_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 689.504 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 15 19:02:42 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 697.953 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 15 20:36:36 2017...
