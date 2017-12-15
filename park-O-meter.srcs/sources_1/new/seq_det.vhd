@@ -58,40 +58,32 @@ clk_division: process (clk, clk_divider)
     
 end process;
     
-counting: process (reset, slow_clk, temp_count)
+counting: process (reset, slow_clk, temp_count,button0,button1,button2,button3)
     begin
-    if reset='1' then
-       temp_count  <=val; -- load value
-    
-    else
         if slow_clk'event and slow_clk='1' then
---            if temp_count>0 then
-
-                if temp_count(3 downto 0)=0 then
-                    temp_count(3 downto 0)<="1001";
+            if button0='1' then
+                temp_count(7 downto 4) <= temp_count(7 downto 4) + "0011";
+            elsif temp_count(3 downto 0)=0 then
+                temp_count(3 downto 0)<="1001";
                 if temp_count(7 downto 4)=0 then
                     temp_count(7 downto 4)<="1001";
-                if temp_count(11 downto 8)=0 then
-                    temp_count(11 downto 8)<="1001";
-                if temp_count(15 downto 12)=0 then
-                    --temp_count(15 downto 12)<="1000";
+                    if temp_count(11 downto 8)=0 then
+                        temp_count(11 downto 8)<="1001";
+                        if temp_count(15 downto 12)=0 then
+                                    --temp_count(15 downto 12)<="1000";
                         else
-                        temp_count(15 downto 12) <= temp_count(15 downto 12) - 1;
+                            temp_count(15 downto 12) <= temp_count(15 downto 12) - 1;
                         end if;
-                        else
+                    else
                         temp_count(11 downto 8) <= temp_count(11 downto 8) - 1;
-                        end if;
-                        else
-                        temp_count(7 downto 4) <= temp_count(7 downto 4) - 1;
-                        end if;    
-                        else
-                        temp_count(3 downto 0) <= temp_count(3 downto 0) - 1;
-                        end if;
-                if temp_count=valup  then  -- when display equal to 20,  restart with 00!!! 
-                    temp_count<=val;
-		end if;                                                            
-           end if;
-   end if;
-end process;         
- 
+                    end if;
+                else
+                    temp_count(7 downto 4) <= temp_count(7 downto 4) - 1;
+                end if;    
+            else
+                temp_count(3 downto 0) <= temp_count(3 downto 0) - 1;
+            end if;   
+                                              
+        end if;
+    end process;         
 end Behavioral;
