@@ -84,7 +84,11 @@ clk_division: process (clk, clk_divider)
             clk_divider<=clk_divider +1;
         end if;
         
-        slow_clk<=clk_divider(24);
+        if clk_divider = "0101111101011110000100000000" then
+            slow_clk<='1';
+        else
+            slow_clk<='0';
+        end if;
     
 end process;
     

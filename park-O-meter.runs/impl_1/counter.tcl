@@ -61,24 +61,88 @@ proc step_failed { step } {
 }
 
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
+start_step init_design
+set ACTIVE_STEP init_design
 set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
-  open_checkpoint counter_routed.dcp
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir Z:/mahmut/park-O-meter/park-O-meter.cache/wt [current_project]
-  catch { write_mem_info -force counter.mmi }
-  write_bitstream -force counter.bit 
-  catch {write_debug_probes -quiet -force counter}
-  catch {file copy -force counter.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
+  set_property parent.project_path Z:/mahmut/park-O-meter/park-O-meter.xpr [current_project]
+  set_property ip_output_repo Z:/mahmut/park-O-meter/park-O-meter.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet Z:/mahmut/park-O-meter/park-O-meter.runs/synth_1/counter.dcp
+  read_xdc Z:/mahmut/park-O-meter/park-O-meter.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc
+  link_design -top counter -part xc7a35tcpg236-1
+  close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
-  step_failed write_bitstream
+  step_failed init_design
   return -code error $RESULT
 } else {
-  end_step write_bitstream
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force counter_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file counter_drc_opted.rpt -pb counter_drc_opted.pb -rpx counter_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  implement_debug_core 
+  place_design 
+  write_checkpoint -force counter_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file counter_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file counter_utilization_placed.rpt -pb counter_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -file counter_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force counter_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file counter_drc_routed.rpt -pb counter_drc_routed.pb -rpx counter_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file counter_methodology_drc_routed.rpt -pb counter_methodology_drc_routed.pb -rpx counter_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file counter_power_routed.rpt -pb counter_power_summary_routed.pb -rpx counter_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file counter_route_status.rpt -pb counter_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -file counter_timing_summary_routed.rpt -warn_on_violation  -rpx counter_timing_summary_routed.rpx"
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file counter_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file counter_clock_utilization_routed.rpt"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force counter_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
   unset ACTIVE_STEP 
 }
 
