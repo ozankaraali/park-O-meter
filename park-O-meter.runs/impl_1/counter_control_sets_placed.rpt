@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Dec 15 22:23:49 2017
+| Date         : Fri Dec 15 22:37:38 2017
 | Host         : OZANKARAALI59C9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file counter_control_sets_placed.rpt
 | Design       : counter
@@ -34,9 +34,9 @@ Table of Contents
 | No           | No                    | No                     |              45 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              32 |           11 |
+| Yes          | No                    | No                     |              16 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              32 |            8 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Fri Dec 15 22:24:08 2017
+| Date             : Fri Dec 15 22:37:57 2017
 | Host             : OZANKARAALI59C9 running 64-bit major release  (build 9200)
 | Command          : report_power -file counter_power_routed.rpt -pb counter_power_summary_routed.pb -rpx counter_power_routed.rpx
 | Design           : counter
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.089        |
+| Total On-Chip Power (W)  | 0.090        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.017        |
+| Dynamic (W)              | 0.019        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.6         |
-| Junction Temperature (C) | 25.4         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      261 |       --- |             --- |
-|   LUT as Logic |     0.001 |      135 |     20800 |            0.65 |
-|   CARRY4       |    <0.001 |       28 |      8150 |            0.34 |
-|   Register     |    <0.001 |       77 |     41600 |            0.19 |
+| Slice Logic    |     0.002 |      445 |       --- |             --- |
+|   LUT as Logic |     0.002 |      246 |     20800 |            1.18 |
+|   CARRY4       |    <0.001 |       61 |      8150 |            0.75 |
+|   Register     |    <0.001 |       93 |     41600 |            0.22 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.001 |      257 |       --- |             --- |
+| Signals        |     0.002 |      372 |       --- |             --- |
 | I/O            |     0.014 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.089 |          |           |                 |
+| Total          |     0.090 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.013 |       0.004 |      0.010 |
+| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |
 | Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,7 +141,7 @@ Table of Contents
 +---------------+-----------+
 | Name          | Power (W) |
 +---------------+-----------+
-| counter       |     0.017 |
+| counter       |     0.019 |
 |   display_out |     0.001 |
 +---------------+-----------+
 

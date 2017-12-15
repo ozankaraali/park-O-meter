@@ -89,13 +89,30 @@ counting: process (reset, slow_clk,button0,button1,button2,button3)
     begin
             if slow_clk'event and slow_clk='1' then
                 if button0='1' then
-                    time<=time+30;
+                    if time < 9970 then
+                        time<=time+30;
+                    else
+                        time <= 9999;
+                    end if;
                 elsif(button1='1')then
                     time<=time+60;
+                    if time < 9940 then
+                        time<=time+60;
+                    else
+                        time <= 9999;
+                    end if;
                 elsif(button2='1')then
-                    time<=time+120;
+                    if time < 9880 then
+                        time<=time+120;
+                    else
+                        time <= 9999;
+                    end if;
                 elsif(button3='1')then
-                    time<=time+300;
+                    if time < 9700 then
+                        time<=time+300;
+                    else
+                        time <= 9999;
+                    end if;
                 else
                     if binIN = 0 then
                         binIN <= std_logic_vector (to_unsigned(time,16));
