@@ -39,7 +39,7 @@ COMPONENT bin2bcd_12bit
 signal time: integer := 0;
 --
 signal slow_clk: std_logic;
-signal clk_divider: std_logic_vector (25 downto 0);
+signal clk_divider: std_logic_vector (27 downto 0);
 --
 
 --Inputs
@@ -81,8 +81,12 @@ clk_division: process (clk, clk_divider)
             clk_divider<=clk_divider +1;
         end if;
         
-        slow_clk<=clk_divider(24);
-    
+        if clk_divider = "0101111101011110000100000000" then
+            slow_clk <= '1';
+            clk_divider <= "0000000000000000000000000000"; 
+        else
+            slow_clk <= '0';
+        end if; 
 end process;
     
 counting: process (reset, slow_clk,button0,button1,button2,button3)   
