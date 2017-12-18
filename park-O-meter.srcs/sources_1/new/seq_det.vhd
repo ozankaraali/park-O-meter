@@ -38,8 +38,8 @@ COMPONENT bin2bcd_12bit
 -- change value if you want (default := 20)
 signal time: integer := 0;
 --
-signal slow_clk: std_logic;
-signal clk_divider: std_logic_vector (27 downto 0);
+signal slow_clk: std_logic := '0';
+signal clk_divider: std_logic_vector (27 downto 0) := "0000000000000000000000000000";
 --
 
 --Inputs
@@ -89,42 +89,32 @@ clk_division: process (clk, clk_divider)
         end if; 
 end process;
     
-counting: process (reset, slow_clk,button0,button1,button2,button3)   
+counting: process (reset, slow_clk, button0, button1, button2, button3)   
     begin
-            if slow_clk'event and slow_clk='1' then
-                if button0='1' then
-                    if time < 9970 then
-                        time<=time+30;
-                    else
-                        time <= 9999;
-                    end if;
-                elsif(button1='1')then
-                    time<=time+60;
-                    if time < 9940 then
-                        time<=time+60;
-                    else
-                        time <= 9999;
-                    end if;
-                elsif(button2='1')then
-                    if time < 9880 then
-                        time<=time+120;
-                    else
-                        time <= 9999;
-                    end if;
-                elsif(button3='1')then
-                    if time < 9700 then
-                        time<=time+300;
-                    else
-                        time <= 9999;
-                    end if;
-                else
-                    if binIN = 0 then
-                        binIN <= std_logic_vector (to_unsigned(time,16));
-                    else   
-                        time<=time-1;
-                        binIN<=std_logic_vector (to_unsigned(time,16));
-                    end if;
-                end if;
+        if slow_clk'event and slow_clk = '1' then
+            if button0 = '1' then
+                time <= time + 30;
+            elsif button1 = '1' then
+                time <= time + 60;
+            elsif button2 = '1' then
+                time <= time + 120;
+            elsif button3 = '1' then
+                time <= time + 300;
+            end if;
+
+            if time > 9999 then
+                time <= 9999;
+            end if;
+ 
+            if time > 0 then
+                time <= time - 1;
+            end if;
+
+            binIN <= std_logic_vector(to_unsigned(time, 16));
+        end if;
+
+        if reset = '1' then
+            time <= 0;
         end if;
     end process;
 end Behavioral;

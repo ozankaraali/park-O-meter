@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../park-O-meter.srcs/sources_1/new/bin2bcd.vhd" \
+"../../../../park-O-meter.srcs/sources_1/new/display_controller.vhd" \
+"../../../../park-O-meter.srcs/sources_1/new/seq_det.vhd" \
+
+# Do not sort compile order
+nosort

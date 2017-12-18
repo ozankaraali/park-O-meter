@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1513585397">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1513620329">
   <File Type="PA-TCL" Name="counter.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="counter_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="counter_reports.tcl"/>
   <File Type="RDS-RDS" Name="counter.vds"/>
   <File Type="RDS-UTIL" Name="counter_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="display_controller_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="counter_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="counter.dcp"/>
   <File Type="VDS-TIMINGSUMMARY" Name="counter_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="counter_timing_summary_synth.pb"/>

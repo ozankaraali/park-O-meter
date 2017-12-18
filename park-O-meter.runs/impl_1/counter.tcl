@@ -66,7 +66,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint counter_routed.dcp
-  set_property webtalk.parent_dir Z:/mahmut/park-O-meter/park-O-meter.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/Samil/Desktop/Kodlama/Repos/park-O-meter/park-o-meter.cache/wt [current_project]
   catch { write_mem_info -force counter.mmi }
   write_bitstream -force counter.bit 
   catch {write_debug_probes -quiet -force counter}
