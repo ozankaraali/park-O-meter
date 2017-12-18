@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="32" Path="Z:/mahmut/park-O-meter/park-O-meter.xpr">
+<Project Version="7" Minor="32" Path="C:/Users/Samil/Desktop/Kodlama/Repos/park-O-meter/park-o-meter.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="35cfdce18d85449c989537d8d4067913"/>
