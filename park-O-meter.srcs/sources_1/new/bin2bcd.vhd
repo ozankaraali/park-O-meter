@@ -68,11 +68,17 @@ bcd1: process(binIN)
     end loop;
  
     -- set outputs
-    ones <= STD_LOGIC_VECTOR(bcd(3 downto 0));
-    tens <= STD_LOGIC_VECTOR(bcd(7 downto 4));
-    hundreds <= STD_LOGIC_VECTOR(bcd(11 downto 8));
-    thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
-  
+    if(binIN = std_logic_vector (to_unsigned(99999,16))) then
+        ones <= "1111";
+        tens <= "1111";
+        hundreds <= "1111";
+        thousands <= "1111";
+    else
+        ones <= STD_LOGIC_VECTOR(bcd(3 downto 0));
+        tens <= STD_LOGIC_VECTOR(bcd(7 downto 4));
+        hundreds <= STD_LOGIC_VECTOR(bcd(11 downto 8));
+        thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
+    end if;
   end process bcd1;            
   
 end Behavioral;

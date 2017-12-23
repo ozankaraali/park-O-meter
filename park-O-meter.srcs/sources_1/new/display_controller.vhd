@@ -70,7 +70,7 @@ begin
           when "1000"=> sseg <="0000000";  -- '8'
           when "1001"=> sseg <="0000100";  -- '9'
            --nothing is displayed when a number more than 9 is given as input. 
-          when others=> sseg <="0000100"; 
+          when others=> sseg <="1111111"; 
    	end case;
     end process;
 

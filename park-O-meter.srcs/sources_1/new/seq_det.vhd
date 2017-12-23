@@ -37,6 +37,7 @@ COMPONENT bin2bcd_12bit
     
 -- change value if you want (default := 20)
 signal time: integer := 0;
+signal modulozero: integer := 0;
 --
 signal slow_clk: std_logic;
 signal clk_divider: std_logic_vector (27 downto 0);
@@ -89,7 +90,7 @@ clk_division: process (clk, clk_divider)
         end if; 
 end process;
     
-counting: process (reset, slow_clk,button0,button1,button2,button3)   
+counting: process (reset, slow_clk,button0,button1,button2,button3,time)   
     begin
         if slow_clk'event and slow_clk = '1' then
             if button0 = '1' then
@@ -119,10 +120,28 @@ counting: process (reset, slow_clk,button0,button1,button2,button3)
                 end if;
             else
                 if time = 0 then
-                    binIN <= std_logic_vector (to_unsigned(time,16));
-                else   
+                    if (modulozero < 1) then
+                        modulozero <= modulozero + 1;
+                        binIN <= std_logic_vector (to_unsigned(99999,16));
+                    else
+                        modulozero <= 0;
+                        binIN <= std_logic_vector (to_unsigned(time,16));
+                    end if;
+                else
                     time <= time-1;
-                    binIN <= std_logic_vector (to_unsigned(time,16));
+                    if (time < 50) then
+                        if (time mod 4) = 0 then
+                            binIN <= std_logic_vector (to_unsigned(99999,16));
+                        elsif (time mod 4) = 1 then
+                            binIN <= std_logic_vector (to_unsigned(time,16));
+                        elsif (time mod 4) = 2 then
+                            binIN <= std_logic_vector (to_unsigned(time,16));
+                        else
+                            binIN <= std_logic_vector (to_unsigned(99999,16));
+                        end if;
+                    else
+                        binIN <= std_logic_vector (to_unsigned(time,16));
+                    end if;
                 end if;
             end if;
         end if;

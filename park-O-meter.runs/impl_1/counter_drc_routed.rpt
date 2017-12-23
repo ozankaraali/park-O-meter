@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Mon Dec 18 22:11:16 2017
-| Host         : samil-pc running 64-bit major release  (build 9200)
+| Date         : Sat Dec 23 13:34:06 2017
+| Host         : OZANKARAALI59C9 running 64-bit major release  (build 9200)
 | Command      : report_drc -file counter_drc_routed.rpt -pb counter_drc_routed.pb -rpx counter_drc_routed.rpx
 | Design       : counter
 | Device       : xc7a35tcpg236-1
@@ -49,82 +49,82 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net binIN_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[0]_LDC_i_1/O, cell binIN_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[0]_LDC_i_1/O, cell binIN_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net binIN_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[10]_LDC_i_1/O, cell binIN_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[10]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[10]_LDC_i_1/O, cell binIN_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net binIN_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[11]_LDC_i_1/O, cell binIN_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[11]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[11]_LDC_i_1/O, cell binIN_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net binIN_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[12]_LDC_i_1/O, cell binIN_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[12]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[12]_LDC_i_1/O, cell binIN_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net binIN_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[13]_LDC_i_1/O, cell binIN_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[13]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[13]_LDC_i_1/O, cell binIN_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net binIN_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[14]_LDC_i_1/O, cell binIN_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[14]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[14]_LDC_i_1/O, cell binIN_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net binIN_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[15]_LDC_i_1/O, cell binIN_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[15]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[15]_LDC_i_1/O, cell binIN_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net binIN_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[1]_LDC_i_1/O, cell binIN_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[1]_LDC_i_1/O, cell binIN_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net binIN_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[2]_LDC_i_1/O, cell binIN_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[2]_LDC_i_1/O, cell binIN_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net binIN_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[3]_LDC_i_1/O, cell binIN_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[3]_LDC_i_1/O, cell binIN_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net binIN_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[4]_LDC_i_1/O, cell binIN_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[4]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[4]_LDC_i_1/O, cell binIN_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net binIN_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[5]_LDC_i_1/O, cell binIN_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[5]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[5]_LDC_i_1/O, cell binIN_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net binIN_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[6]_LDC_i_1/O, cell binIN_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[6]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[6]_LDC_i_1/O, cell binIN_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net binIN_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[7]_LDC_i_1/O, cell binIN_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[7]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[7]_LDC_i_1/O, cell binIN_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net binIN_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[8]_LDC_i_1/O, cell binIN_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[8]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[8]_LDC_i_1/O, cell binIN_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net binIN_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin binIN_reg[9]_LDC_i_1/O, cell binIN_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net binIN_reg[9]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin binIN_reg[9]_LDC_i_1/O, cell binIN_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
