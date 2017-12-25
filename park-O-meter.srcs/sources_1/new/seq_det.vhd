@@ -37,7 +37,7 @@ COMPONENT bin2bcd_12bit
     
 -- change value if you want (default := 20)
 signal time: integer := 0;
-signal modulozero: integer := 0;
+signal modulozero: std_logic;
 --
 signal slow_clk: std_logic;
 signal clk_divider: std_logic_vector (27 downto 0);
@@ -120,12 +120,12 @@ counting: process (reset, slow_clk,button0,button1,button2,button3,time)
                 end if;
             else
                 if time = 0 then
-                    if (modulozero < 1) then
-                        modulozero <= modulozero + 1;
+                    if (modulozero = '1') then
                         binIN <= std_logic_vector (to_unsigned(99999,16));
+                        modulozero <= '0';
                     else
-                        modulozero <= 0;
                         binIN <= std_logic_vector (to_unsigned(time,16));
+                        modulozero <= '1';
                     end if;
                 else
                     time <= time-1;
